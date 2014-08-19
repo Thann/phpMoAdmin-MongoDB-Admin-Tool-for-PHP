@@ -1133,8 +1133,9 @@ class htmlHelper {
                 $return .= PHP_EOL . (is_array($head) ? implode(PHP_EOL, $head) : $head);
             }
 
-            $return .= PHP_EOL . '</head>' . PHP_EOL . '<body>'
-                    . $this->js('https://GoChat.us/chat.js#identity=5047dd509c3a8dd8fec07b5b&appid=phpmoadmin.com');
+            $return .= PHP_EOL . '</head>' . PHP_EOL . '<body>';
+            	    //DISABLED gochat. Insecure crapware has no place in a DB admin tool...
+                    //. $this->js('https://GoChat.us/chat.js#identity=5047dd509c3a8dd8fec07b5b&appid=phpmoadmin.com');
             return $return;
         } else {
             $errorMsg = 'Invalid usage of ' . __METHOD__ . '() - the header has already been returned';
